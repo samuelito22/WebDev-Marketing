@@ -25,6 +25,9 @@
 .navigation .link+.link{
     margin-left: 25px;
 }
+.navigation .link{
+    height: 100%;
+}
 
 
 
@@ -62,7 +65,7 @@
     visibility: visible;
     opacity: 1;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    transform: translateY(6px);
+    transform: translateY(3px);
 }
 
 .navigation .dropdown .linkSecondary{
@@ -78,5 +81,5 @@
 }
 
 .navigation .link:last-child .dropdown{
-    transform: translateY(29px);
+    transform: translateY(26px);
 }
