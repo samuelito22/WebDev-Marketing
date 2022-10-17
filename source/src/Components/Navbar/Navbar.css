@@ -2,7 +2,7 @@
     width: 100vw;
     justify-content: center;
     display: flex;
-    background-color: rgb(24, 23, 23);
+    border-bottom: 0.5px solid rgb(214, 214, 214);
 }
 .navbar .container{
     display: flex;
@@ -12,7 +12,7 @@
     margin: 10px 0px;
 }
 .navbar .container .logo{
-    color: rgb(255, 255, 255);
+    color: black;
     font-weight: 900;
     font-size: large;
     transform: scale(1.2);
@@ -22,21 +22,61 @@
     display: flex;
 }
 
-.navbar .container .navigation .link+.link{
+.navigation .link+.link{
     margin-left: 25px;
 }
 
-.navbar .container .navigation .link .linkPrimary{
-    color: rgb(255, 255, 255);
-    font-size: 0.85rem;
+
+
+.navigation .link .linkPrimary{
+    color: black;
+    font-size: 0.82rem;
     font-weight: 700;
+    transition: 0.4s;
+}
+.navigation .link:hover .linkPrimary{
+    color: green;
+    
 }
 
-.navbar .container .navigation .link .linkPrimary .arrow{
-    transform: rotate(-180deg) translate(-7px,-1.5px);
-
+.navigation .link .linkPrimary .arrow{
+    transform: scale(-1) translate(-7px,-1.5px);
+    transition: 0.4s;
+    color: black;
 }
 
-.navbar .container .navigation .link:hover .arrow{
-    transform: rotate(0deg) translate(7px,1.5px);
+.navigation .link:hover .arrow{
+    transform: scale(1) translate(7px,1.5px);
+    color: green;
+}
+.navigation .dropdown{
+    display: flex;
+    opacity: 0;
+    background: white;
+    flex-direction: column;
+    position: absolute;
+    visibility: hidden;
+    width: 150px;
+}
+.navigation .link:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transform: translateY(6px);
+}
+
+.navigation .dropdown .linkSecondary{
+    color: black;
+    padding: 10px 10px;
+    margin-left: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+.navigation .link:last-child{
+    justify-content: flex-end;
+    display: flex;
+}
+
+.navigation .link:last-child .dropdown{
+    transform: translateY(29px);
 }

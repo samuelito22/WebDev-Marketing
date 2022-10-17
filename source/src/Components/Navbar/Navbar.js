@@ -32,8 +32,13 @@ function Navbar() {
             <Link to='/' className='logo'><span style={{color:"green"}}>.</span>WebM</Link>
             <div className='navigation'>
                 {navigationLinks.map( nav => (
-                    <div key={nav.mal_id} className = "link">
-                    <Link to="#" className='linkPrimary'>{nav.top}<IoIosArrowUp className='arrow'/></Link>
+                    <div key={nav.mal_id} className = "link">                        
+                    <Link to="#" className='linkPrimary'>{nav.top}<IoIosArrowUp className='arrow' /></Link>
+                    <div className='dropdown'>
+                        {nav.dropdown.map( drop => (
+                            <Link to='#' className='linkSecondary'>{drop}</Link>
+                        ))}
+                    </div>
                     </div>
                 ))}
             </div>
