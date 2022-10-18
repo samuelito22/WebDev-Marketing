@@ -6,18 +6,19 @@ import {IoIosArrowUp} from 'react-icons/io'
 function Navbar() {
     const navigationLinks = [{
         mal_id: 0,
-        top: "HOME",
+        top: "SERVICES",
         dropdown: [null]
         },{
         mal_id: 1,
         top: "ABOUT US",
         dropdown: [null]
-        },{
+        },
+        {
         mal_id: 2,
-        top: "SERVICES",
+        top: "PORTFOLIO",
         dropdown: [null]
         },{
-        mal_id: 4,
+        mal_id: 3,
         top: "CONTACT US",
         dropdown: [null]
         }]
