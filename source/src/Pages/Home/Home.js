@@ -39,7 +39,7 @@ function Home() {
     </div>
     <div className='services' style={{width:"100%",textAlign:"center"}}>
       <h1 style={{fontSize:"1.5rem",fontWeight:"800"}}>Our Specialities</h1>
-      <div style={{display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap",animationName:"fading",animationDuration:"2s"}}>
+      <div style={{display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap",animationName:"fading",animationDuration:"2s",width:"100%"}}>
       {serviceList.map( service => (
         <div className='serviceBx' key={service.mal_id}>
           <div className='imgBx'><service.icon className='icon'/></div>

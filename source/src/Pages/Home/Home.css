@@ -43,6 +43,7 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    width: 100%;
     padding: 10px;
 }
 
@@ -108,6 +109,9 @@
   @media only screen and (max-width: 400px) {
     .banner .container .imgBx{
         display: none;
+    }
+    .banner .container{
+        display: flex;
     }
   }
 
