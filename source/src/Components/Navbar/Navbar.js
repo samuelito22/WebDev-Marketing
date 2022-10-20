@@ -7,20 +7,19 @@ function Navbar() {
     const navigationLinks = [{
         mal_id: 0,
         top: "SERVICES",
-        dropdown: [null]
+        dropdown: [null],
+        link:"#Services"
         },{
         mal_id: 1,
         top: "ABOUT US",
-        dropdown: [null]
+        dropdown: [null],
+        link:"#About"
         },
         {
         mal_id: 2,
         top: "PORTFOLIO",
-        dropdown: [null]
-        },{
-        mal_id: 3,
-        top: "CONTACT US",
-        dropdown: [null]
+        dropdown: [null],
+        link: "https://zorocut.com/Projects"
         }]
 
   return (
@@ -30,7 +29,7 @@ function Navbar() {
             <div className='navigation'>
                 {navigationLinks.map( nav => (
                     <div key={nav.mal_id} className = "link">                        
-                    <Link to="#" className='linkPrimary'>{nav.top}<IoIosArrowUp className='arrow' style={{display:"none"}}/></Link>
+                    <a href={nav.link} className='linkPrimary'>{nav.top}<IoIosArrowUp className='arrow' style={{display:"none"}}/></a>
                     {/*<div className='dropdown'>
                         {nav.dropdown.map( drop => (
                             <Link to='#' className='linkSecondary'>{drop}</Link>
@@ -39,7 +38,7 @@ function Navbar() {
                     </div>
                 ))}
                 <div className = "link">                        
-                    <Link to="#" className='btn-hireUs'>HIRE US</Link>
+                    <a href="#Contact" className='btn-hireUs'>HIRE US</a>
                 </div>
             </div>
         </div>

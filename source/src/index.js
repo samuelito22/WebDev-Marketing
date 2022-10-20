@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 export {default as Navbar} from './Components/Navbar/Navbar'
+export {default as Footer} from './Components/Footer/Footer'
+
 export { default as Home } from './Pages/Home/Home'
 
 export {default as BannerImage} from './Assets/WebM Agency.png'

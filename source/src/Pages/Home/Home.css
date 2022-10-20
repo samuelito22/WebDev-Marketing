@@ -168,3 +168,114 @@
     0%   {opacity: 0;}
     100%  {opacity: 1;}
 }
+
+.about{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 40px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.testimonial{
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .about{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+.testimonial .card{
+    height: 100%;
+    min-width: 400px;
+    margin-right: 30px;
+    --cardText: black;
+    --cardBackground: white;
+    --playState: running;
+    position: relative;
+    border-radius: 12px;
+    margin: auto 30px auto 0;
+}
+.testimonial .list{
+    display: flex;
+    width: min-content;
+    height: auto;
+    flex-direction: row;
+    animation-name: slider;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function:linear;
+    animation-play-state: running;
+
+}
+.testimonial .card .container{
+    transition: 0.7s;
+    height: auto;
+    overflow-y: hidden;
+    width: 100%;
+    background-color: var(--cardBackground);
+    transition: 0.2s;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16)  0px 1px 6px 0px;
+    padding-bottom: 10px;
+}
+
+.testimonial .card .container h1{
+    color: var(--cardText);
+    text-align: center;
+    margin: auto;
+    font-size: 1.2rem;
+    padding-top: 20px;
+    font-weight: 800;
+}
+.testimonial .card .container p{
+    color: var(--cardText);
+    text-align: center;
+    margin: auto;
+    padding: 10px 5px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.testimonial .card:hover{
+    --cardBackground: var(--default);
+    --cardText: white;
+}
+
+
+.testimonial .list:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes slider {
+    0%   {transform: translateX(800px)}
+    100%  {transform: translateX(-1750px);
+        
+    }
+}
+
+.read-more { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; padding: 12px 0; 
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;     
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, white);
+  }
+
+  #Services {
+    scroll-margin-top: 50px;
+  }
