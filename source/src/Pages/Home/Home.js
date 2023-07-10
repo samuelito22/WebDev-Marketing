@@ -1,7 +1,6 @@
 import React from 'react'
 import './Home.css'
 import {BannerImage} from '../../index'
-import { Link } from 'react-router-dom'
 import {IoBuildOutline} from 'react-icons/io5'
 import {MdOutlineAutoFixHigh} from 'react-icons/md'
 import {TbWritingSign} from 'react-icons/tb'
@@ -52,7 +51,6 @@ const testimonialList = [{
       <div className='descriptionBx'>
         <h1>WebM Agency</h1>
         <p>Rebuild your website into a masterpiece!</p>
-        <a href='https://zorocut.com/Projects' target="_blank" className='btn-Portfolio'>PORTFOLIO</a>
       </div>
         <div className='imgBx'><img src={BannerImage}/></div>
         

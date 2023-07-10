@@ -15,21 +15,17 @@ function Navbar() {
         dropdown: [null],
         link:"#About"
         },
-        {
-        mal_id: 2,
-        top: "PORTFOLIO",
-        dropdown: [null],
-        link: "https://zorocut.com/Projects"
-        }]
+        
+]
 
   return (
     <div className='navbar'>
         <div className='container'>
-            <Link to='/' className='logo'><span style={{color:"var(--default)"}}>.</span>WebM</Link>
+            <Link to='/' className='logo'><span className="logo-dot">.</span>WebM</Link>
             <div className='navigation'>
                 {navigationLinks.map( nav => (
                     <div key={nav.mal_id} className = "link">                        
-                    <a href={nav.link} className='linkPrimary'>{nav.top}<IoIosArrowUp className='arrow' style={{display:"none"}}/></a>
+                    <a href={nav.link} className='linkPrimary'>{nav.top}<IoIosArrowUp className='arrow hidden'/></a>
                     {/*<div className='dropdown'>
                         {nav.dropdown.map( drop => (
                             <Link to='#' className='linkSecondary'>{drop}</Link>
